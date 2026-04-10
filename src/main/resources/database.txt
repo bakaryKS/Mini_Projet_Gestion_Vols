@@ -1,0 +1,8 @@
+PASSAGER_AJOUTE: Passager{passport='US123456', reservations=0}
+AEROPORT_AJOUTE: Aeroport{nom='JFK', ville='New York', description='John F. Kennedy International'}
+AEROPORT_AJOUTE: Aeroport{nom='LHR', ville='London', description='London Heathrow'}
+AVION_AJOUTE: Avion{immatriculation='N12345', modele='Boeing 747', capacite=300}
+VOL_AJOUTE: Vol{numeroVol='AA100', origine='New York', destination='London', statut='Prévu'}
+PILOTE_AJOUTE: Pilote{licence='ATPL', heuresDeVol=15000, nombreVolsAssignes=0}
+PERSONNEL_CABINE_AJOUTE: PersonnelCabine{qualification='Chef de cabine', nombreVolsAssignes=0}
+RESERVATION_AJOUTEE: Reservation{numeroReservation=1000, idPassager=1, numeroVol='AA100', dateReservation='2024-12-01', statut='Confirmée'}

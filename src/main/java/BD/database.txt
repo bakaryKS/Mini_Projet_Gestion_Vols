@@ -1,0 +1,36 @@
+=== AIRLINE MANAGEMENT DATABASE ===
+Created: 2024-12-01
+Version: 1.0
+
+--- AIRPORTS ---
+CDG|Charles de Gaulle|Paris|Main airport in Paris
+BRN|Bron|Lyon|Main airport in Lyon
+MRS|Marseille-Provence|Marseille|Main airport in South France
+
+--- Avions ---
+F-GKJT|Boeing 737|180|Available
+F-HEPA|Airbus A320|195|Available
+
+--- Vols ---
+AF123|Paris|Lyon|08:00|09:30|Scheduled|F-GKJT
+AF456|Paris|Marseille|10:00|11:45|Scheduled|F-HEPA
+
+--- PASSAGERS ---
+1|Jean Dupont|Paris|06123456789|AB123456
+2|Marie Martin|Lyon|06987654321|CD789012
+3|Pierre Bernard|Marseille|06555555555|EF345678
+
+--- EMPLOYES (PILOTS) ---
+10|Captain John Smith|London|0123456789|1001|2015-05-15|ATPL-A|5000
+11|Captain Anne Leclerc|Paris|0612345678|1002|2016-03-20|ATPL-A|4500
+
+--- EMPLOYES (CABIN STAFF) ---
+20|Sophie Renaud|Paris|0698765432|2001|2018-07-10|Senior Flight Attendant
+21|Thomas Dupuis|Lyon|0656789123|2002|2019-01-15|Flight Attendant
+
+--- RESERVATIONS ---
+1000|1|AF123|2024-12-01|Confirmed
+1001|2|AF123|2024-12-01|Confirmed
+1002|3|AF456|2024-12-01|Pending
+
+--- END OF DATABASE ---
