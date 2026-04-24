@@ -12,7 +12,7 @@ public class Main {
 
         // Test 1 : Créer et afficher un passager
         System.out.println("--- Test 1 : Gestion des passagers ---");
-        Passager passager1 = new Passager(1, "Alice Johnson", "10 Main St", "555-0001", "US123456");
+        Passager passager1 = new Passager(1, "Bakary SACKO", "10 WQ St", "555-0001", "FR123456");
         bd.ajouterPassager(passager1);
         passager1.getInfos();
         System.out.println();

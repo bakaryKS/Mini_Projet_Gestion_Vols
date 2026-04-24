@@ -2,7 +2,7 @@
 Created: 2024-12-01
 Version: 1.0
 
---- AIRPORTS ---
+--- SECTION AIRPORTS ---
 CDG|Charles de Gaulle|Paris|Main airport in Paris
 BRN|Bron|Lyon|Main airport in Lyon
 MRS|Marseille-Provence|Marseille|Main airport in South France
@@ -15,7 +15,7 @@ F-HEPA|Airbus A320|195|Available
 AF123|Paris|Lyon|08:00|09:30|Scheduled|F-GKJT
 AF456|Paris|Marseille|10:00|11:45|Scheduled|F-HEPA
 
---- PASSAGERS ---
+--- SECTION PASSAGER ---
 1|Jean Dupont|Paris|06123456789|AB123456
 2|Marie Martin|Lyon|06987654321|CD789012
 3|Pierre Bernard|Marseille|06555555555|EF345678

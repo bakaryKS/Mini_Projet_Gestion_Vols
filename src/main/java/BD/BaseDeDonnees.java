@@ -31,7 +31,7 @@ public class BaseDeDonnees {
     public void ajouterPassager(Passager passager) {
         passagers.add(passager);
         personnes.add(passager);
-        sauvegarderDansFichier("PASSAGER_AJOUTE: " + passager.toString());
+        sauvegarderDansFichier("SECTION PASSAGER",passager.toString());
         System.out.println("Passager ajouté: " + passager.getNom());
     }
 
@@ -48,7 +48,7 @@ public class BaseDeDonnees {
             p.setNom(nom);
             p.setAdresse(adresse);
             p.setContact(contact);
-            sauvegarderDansFichier("PASSAGER_MODIFIE: " + p.toString());
+            sauvegarderDansFichier("SECTION PASSAGER MODIFIER", p.toString());
         }
     }
 
@@ -57,7 +57,7 @@ public class BaseDeDonnees {
         if (p != null) {
             passagers.remove(p);
             personnes.remove(p);
-            sauvegarderDansFichier("PASSAGER_SUPPRIME: " + id);
+          //  sauvegarderDansFichier("PASSAGER_SUPPRIME", toString(id));
         }
     }
 
@@ -69,7 +69,7 @@ public class BaseDeDonnees {
     public void ajouterPilote(Pilote pilote) {
         employes.add(pilote);
         personnes.add(pilote);
-        sauvegarderDansFichier("PILOTE_AJOUTE: " + pilote.toString());
+        sauvegarderDansFichier("SECTION PILOTE AJOUTE ", pilote.toString());
         System.out.println("Pilote ajouté: " + pilote.getNom());
     }
 
@@ -86,7 +86,7 @@ public class BaseDeDonnees {
     public void ajouterPersonnelCabine(PersonnelCabine personnel) {
         employes.add(personnel);
         personnes.add(personnel);
-        sauvegarderDansFichier("PERSONNEL_CABINE_AJOUTE: " + personnel.toString());
+        sauvegarderDansFichier("SECTION PERSONNEL CABINE AJOUTE ", personnel.toString());
         System.out.println("Personnel ajouté: " + personnel.getNom());
     }
 
@@ -102,7 +102,7 @@ public class BaseDeDonnees {
     // CRUD pour Vols
     public void ajouterVol(Vol vol) {
         vols.add(vol);
-        sauvegarderDansFichier("VOL_AJOUTE: " + vol.toString());
+        sauvegarderDansFichier("SECTION VOL AJOUTE ", vol.toString());
         System.out.println("Vol ajouté: " + vol.getNumeroVol());
     }
 
@@ -117,7 +117,7 @@ public class BaseDeDonnees {
         Vol v = getVol(numeroVol);
         if (v != null) {
             v.setStatut(statut);
-            sauvegarderDansFichier("VOL_MODIFIE: " + v.toString());
+            sauvegarderDansFichier("SECTION VOL MODIFIE ", v.toString());
         }
     }
 
@@ -125,7 +125,7 @@ public class BaseDeDonnees {
         Vol v = getVol(numeroVol);
         if (v != null) {
             vols.remove(v);
-            sauvegarderDansFichier("VOL_SUPPRIME: " + numeroVol);
+           // sauvegarderDansFichier("VOL_SUPPRIME: " + numeroVol);
         }
     }
 
@@ -136,7 +136,7 @@ public class BaseDeDonnees {
     // CRUD pour Avions
     public void ajouterAvion(Avion avion) {
         avions.add(avion);
-        sauvegarderDansFichier("AVION_AJOUTE: " + avion.toString());
+        sauvegarderDansFichier("SECTION AVION AJOUTE: ", avion.toString());
         System.out.println("Avion ajouté: " + avion.getImmatriculation());
     }
 
@@ -154,7 +154,7 @@ public class BaseDeDonnees {
     // CRUD pour Aéroports
     public void ajouterAeroport(Aeroport aeroport) {
         aeroports.add(aeroport);
-        sauvegarderDansFichier("AEROPORT_AJOUTE: " + aeroport.toString());
+        sauvegarderDansFichier("SECTION AEROPORT AJOUTE", aeroport.toString());
         System.out.println("Aéroport ajouté: " + aeroport.getNom());
     }
 
@@ -172,7 +172,7 @@ public class BaseDeDonnees {
     // CRUD pour Réservations
     public void ajouterReservation(Reservation reservation) {
         reservations.add(reservation);
-        sauvegarderDansFichier("RESERVATION_AJOUTEE: " + reservation.toString());
+        sauvegarderDansFichier("SECTION RESERVATION AJOUTEE ", reservation.toString());
         System.out.println("Réservation ajoutée: " + reservation.getNumeroReservation());
     }
 
@@ -188,11 +188,35 @@ public class BaseDeDonnees {
     }
 
     // Sauvegarde dans fichier
-    private void sauvegarderDansFichier(String data) {
-        try (FileWriter fw = new FileWriter(FICHIER_BD, true);
-             BufferedWriter bw = new BufferedWriter(fw)) {
-            bw.write(data);
-            bw.newLine();
+    private void sauvegarderDansFichier(String section, String data) {
+        try {
+            File file = new File(FICHIER_BD);
+            List<String> lignes = new ArrayList<>();
+
+            // Lire tout le fichier
+            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+                String ligne;
+                while ((ligne = br.readLine()) != null) {
+                    lignes.add(ligne);
+                }
+            }
+
+            // Trouver la section et insérer la donnée
+            for (int i = 0; i < lignes.size(); i++) {
+                if (lignes.get(i).equalsIgnoreCase("--- " + section + " ---")) {
+                    lignes.add(i + 1, data); // insère juste après le titre
+                    break;
+                }
+            }
+
+            // Réécrire tout le fichier
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+                for (String ligne : lignes) {
+                    bw.write(ligne);
+                    bw.newLine();
+                }
+            }
+
         } catch (IOException e) {
             System.err.println("Erreur sauvegarde: " + e.getMessage());
         }

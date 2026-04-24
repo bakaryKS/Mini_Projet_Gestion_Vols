@@ -4,25 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7441df23-cde0-47a7-ba9d-e5f0985a44b6" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/BD/BaseDeDonnees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/BD/database.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modele/Aeroport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modele/Avion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modele/Employe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modele/Passager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modele/Personne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modele/PersonnelCabine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modele/Pilote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modele/Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modele/Vol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database.txt" afterDir="false" />
+    <list default="true" id="7441df23-cde0-47a7-ba9d-e5f0985a44b6" name="Changes" comment="Projet v1">
+      <change afterPath="$PROJECT_DIR$/src/test/java/PersonneTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ReservationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/VolTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.txt" beforeDir="false" afterPath="$PROJECT_DIR$/database.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BD/BaseDeDonnees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BD/BaseDeDonnees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BD/database.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BD/database.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Modele/PersonnelCabine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Modele/PersonnelCabine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +57,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.PersonneTest.executor": "Run",
+    "JUnit.ReservationTest.executor": "Run",
+    "JUnit.VolTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
@@ -116,7 +110,10 @@
       <option name="presentableId" value="Default" />
       <updated>1775823905145</updated>
       <workItem from="1775823906078" duration="2534000" />
-      <workItem from="1775826537609" duration="5674000" />
+      <workItem from="1775826537609" duration="6007000" />
+      <workItem from="1776410071982" duration="142000" />
+      <workItem from="1776411307760" duration="2611000" />
+      <workItem from="1777018997644" duration="2774000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -126,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775825760174</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Projet v1">
+      <option name="closed" value="true" />
+      <created>1775833253009</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1775833253009</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +150,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="Projet v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projet v1" />
   </component>
 </project>
